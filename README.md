@@ -39,25 +39,25 @@ This repository implements an LSTM-based spatio‑temporal forecasting pipeline 
 pip install numpy pandas tensorflow flask
 ```
 
-###2. Prepare Training Data
+### 2. Prepare Training Data
 
 Ensure your weather time-series data (temperature, humidity, pressure, etc.) is structured and accessible via fetch_weather.py or pre-populated files.
 
-###3. Train the Model
+### 3. Train the Model
 
 ```bash
 python train_model.py
 ```
 This will save the model as weather_lstm_model.h5.
 
-###4. Generate Predictions
+### 4. Generate Predictions
 
 ```bash
 python predict_model.py
 ```
 Use the trained LSTM to forecast future weather values based on input data.
 
-###5. Launch the Web Interface (Optional)
+### 5. Launch the Web Interface (Optional)
 
 ```bash
 python app.py
@@ -68,10 +68,11 @@ Access the prediction API locally:
 http://localhost:5000/predict?city=YourCity
 ```
 
-🎯 Model Architecture
+ Model Architecture
 
 The core of this system is an LSTM (Long Short-Term Memory) neural network, trained on historical multivariate weather data. The model captures temporal dependencies and can ingest sequential data from multiple locations to produce future forecasts.
-📈 Evaluation
+
+ Evaluation
 
 Model performance should be assessed using standard regression metrics:
 
@@ -82,7 +83,7 @@ Model performance should be assessed using standard regression metrics:
     Mean Absolute Percentage Error (MAPE)
 
 Adapt evaluation in train_model.py or a dedicated script.
-🚨 Notes & Tips
+ Notes & Tips
 
     Customize input and output features in train_model.py and predict_model.py for variables like temperature, humidity, wind speed, etc.
 
@@ -90,7 +91,7 @@ Adapt evaluation in train_model.py or a dedicated script.
 
     Flask-based interface in app.py is minimal—modify routing and response schema as needed.
 
-💡 Suggested Enhancements
+ Suggested Enhancements
 
     Clearly document the training and prediction data formats.
 
